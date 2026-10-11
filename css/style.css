@@ -26,13 +26,17 @@ img {
 }
 
 /* ==========================================
-   3. GAYA MOBILE (DASAR - 1 KOLOM)
+   2. GAYA MOBILE (HEADER STICKY + TOMBOL KEMBALI)
    ========================================== */
 .site-header {
     background-color: #281d18;
     color: #f3f4f6;
     padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     border-bottom: 1px solid #3e2d26;
+    backdrop-filter: blur(8px);
 }
 
 .header-container {
@@ -40,6 +44,45 @@ img {
     flex-direction: column;
     align-items: center;
     gap: 0.8rem;
+}
+
+/* Pembungkus Kiri (Tombol Kembali & Logo) */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Tombol Kembali (Kecil, Bulat, Menempel di Kiri) */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #3e2d26;
+    color: #f3f4f6;
+    font-size: 0.85rem;
+    text-decoration: none;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: rgba(217, 119, 6, 0.2);
+    border-color: #d97706;
+    color: #d97706;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
 .site-header nav {
@@ -121,7 +164,7 @@ img {
 }
 
 /* ==========================================
-   4. TABLET: @media (min-width: 768px)
+   3. TABLET: @media (min-width: 768px)
    ========================================== */
 @media (min-width: 768px) {
     .container {
@@ -132,6 +175,11 @@ img {
     .header-container {
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .header-left {
+        width: auto;
+        justify-content: flex-start;
     }
 
     .hero {
@@ -147,7 +195,7 @@ img {
 }
 
 /* ==========================================
-   5. DESKTOP: @media (min-width: 1024px)
+   4. DESKTOP: @media (min-width: 1024px)
    ========================================== */
 @media (min-width: 1024px) {
     .container {
