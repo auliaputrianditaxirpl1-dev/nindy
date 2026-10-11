@@ -5,14 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profil Pribadi - Nindy Anda Riska</title>
+  <!-- FontAwesome untuk ikon panah kembali -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <!-- Header & Navigasi (Flexbox) -->
+  <!-- Header & Navigasi (Menetap di Atas / Sticky) -->
   <header class="site-header">
     <div class="container header-container">
-      <h1 class="logo">Portofolio Saya</h1>
+      <div class="header-left">
+        <!-- Tombol Kembali (Ubah atribut href="#" ke halaman utama Anda) -->
+        <a href="https://portofoliotim.vercel.app/" class="back-btn" title="Kembali">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <h1 class="logo">Portofolio Saya</h1>
+      </div>
       <nav>
         <a href="#tentang">Tentang</a>
         <a href="#keahlian">Keahlian</a>
@@ -22,9 +30,8 @@
   </header>
 
   <main class="container">
-    <!-- Hero Section (Flexbox) -->
+    <!-- Hero Section -->
     <section id="tentang" class="hero">
-      <!-- Perbaikan nama file gambar agar sesuai dengan file asli di folder img/ -->
       <img src="30. NINDY ANDA RISKA.jpg" alt="Foto Profil Nindy">
       <div class="hero-text">
         <h2>Halo, Saya Nindy Anda Riska</h2>
@@ -33,7 +40,7 @@
       </div>
     </section>
 
-    <!-- Keahlian Section (Grid) -->
+    <!-- Keahlian Section -->
     <section id="keahlian" class="skills">
       <h2>Keahlian Saya</h2>
       <div class="grid-container">
@@ -52,20 +59,20 @@
       </div>
     </section>
 
-    <!-- Proyekin (Grid) -->
+    <!-- Proyek Section -->
     <section id="portofolio" class="gallery">
       <h2>Galeri Portofolio</h2>
       <div class="grid-container">
         <figure class="card">
-          <img src="1.jpeg" Proyek 1">
-          <figcaption>sertivikat sederhana</figcaption>
+          <img src="1.jpeg" alt="Proyek 1">
+          <figcaption>Sertifikat sederhana</figcaption>
         </figure>
         <figure class="card">
-          <img src="2.jpeg" Proyek 2">
+          <img src="2.jpeg" alt="Proyek 2">
           <figcaption>Aplikasi Kalkulator Sederhana</figcaption>
         </figure>
         <figure class="card">
-          <img src="3.jpeg" Proyek 3">
+          <img src="3.jpeg" alt="Proyek 3">
           <figcaption>Registrasi siswa baru</figcaption>
         </figure>
       </div>
